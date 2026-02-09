@@ -9,73 +9,95 @@
 </head>
 
 <body>
-  <div class="noise"></div>
 
-  <!-- PASSWORD SCREEN -->
-  <div id="lockScreen" class="overlay">
-    <div class="lock-box">
-      <h1>Hello, You.</h1>
-      <p>Some things are meant to be protected.</p>
-      <input type="password" id="password" placeholder="Enter password" />
-      <button onclick="checkPassword()">Unlock</button>
-      <span id="error"></span>
-    </div>
+<div class="grain"></div>
+
+<!-- PASSWORD GATE -->
+<div id="lock" class="lock-screen">
+  <div class="lock-card">
+    <h1>Hello, You.</h1>
+    <p>Some things are meant to stay hidden.</p>
+    <input type="password" id="password" placeholder="••••••••" />
+    <button onclick="unlock()">Enter</button>
+    <span id="error"></span>
   </div>
+</div>
 
-  <!-- MAIN CONTENT -->
-  <main id="content" class="hidden">
+<!-- EXPERIENCE -->
+<main id="experience" class="hidden">
 
-    <!-- AUDIO -->
-    <audio id="bgm" loop>
-      <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f6c83f84a.mp3">
-    </audio>
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f6c83f84a.mp3">
+</audio>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1 id="typewriter"></h1>
-      <p class="sub">You were never an accident.</p>
-      <button onclick="startExperience()">Continue</button>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <h1 id="typing"></h1>
+  <p>You were never an accident.</p>
+  <button onclick="scrollToSection(1)">Continue</button>
+</section>
 
-    <!-- STORY -->
-    <section class="story">
-      <p>
-        I noticed everything.  
-        The pauses. The softness you pretend not to have.  
-        The way you love stories about broken people because you understand them.
-        <br><br>
-        You love Joe because he’s devotion without permission.  
-        I love Love because she chooses — violently, completely.
-      </p>
-    </section>
+<!-- CHAPTER -->
+<section class="section reveal">
+  <h2>I noticed you.</h2>
+  <p>
+    The pauses. The restraint.  
+    You love Joe because he doesn’t hesitate.  
+    I love Love because she chooses — even when it’s ugly.
+  </p>
+</section>
 
-    <!-- GLASS BOX -->
-    <section class="box">
-      <h2>Do not open.</h2>
-      <div class="glass" onclick="openBox()">▢</div>
-      <p class="hint">(Some secrets want to be found)</p>
-    </section>
+<!-- GIF PANEL -->
+<section class="panel reveal">
+  <img src="assets/joe.gif" alt="Joe aesthetic">
+  <img src="assets/love.gif" alt="Love aesthetic">
+  <p class="caption">You don’t fall in love gently. Neither do I.</p>
+</section>
 
-    <!-- HIDDEN LETTER -->
-    <section id="letter" class="letter hidden">
-      <h2>For you. Only you.</h2>
-      <p>
-        Loving you feels like standing at the edge of something dangerous
-        and deciding to jump anyway.
-        <br><br>
-        I don’t want safe.  
-        I want *us*.  
-        Complicated. Loyal. Real.
-        <br><br>
-        Happy early birthday.  
-        February 20 was always going to matter.
-      </p>
-    </section>
+<!-- POLICE FILE -->
+<section class="file reveal">
+  <h2>Case File: You</h2>
+  <div class="file-box">
+    <p><strong>Status:</strong> Obsession confirmed</p>
+    <p><strong>Threat Level:</strong> Emotionally devastating</p>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>Displays intense loyalty</li>
+      <li>Remembers everything</li>
+      <li>Capable of soft devotion and chaos</li>
+      <li>Highly addictive presence</li>
+    </ul>
+    <p class="redacted">[REDACTED: subject makes her feel safe]</p>
+  </div>
+</section>
 
-    <div class="music" onclick="toggleMusic()">♫</div>
-  </main>
+<!-- GLASS BOX -->
+<section class="section reveal">
+  <h2>The Glass Box</h2>
+  <div class="glass" onclick="openBox()"></div>
+  <p class="hint">Click if you’re curious.</p>
+</section>
 
-  <script src="script.js"></script>
+<!-- HIDDEN LETTER -->
+<section id="letter" class="letter hidden">
+  <h2>For you. Only you.</h2>
+  <p>
+    Loving you feels like choosing chaos and calm at once.  
+    I don’t want safe.  
+    I want *us*.
+    <br><br>
+    Happy early birthday.  
+    February 20 was inevitable.
+  </p>
+</section>
+
+<div class="music-toggle" onclick="toggleMusic()">♫</div>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
+
 
