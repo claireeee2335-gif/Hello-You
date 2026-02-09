@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0f14, #050404);
+  color: #f2e9ec;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* PASSWORD */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #050404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.lock-box {
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.lock-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.lock-box input {
+  margin-top: 20px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #ffb3c6;
+  color: #fff;
+}
+
+.lock-box button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid #ffb3c6;
+  color: #ffb3c6;
+  cursor: pointer;
+}
+
+#error {
+  display: block;
+  margin-top: 10px;
+  color: #ff4d6d;
+}
+
+/* MAIN */
+.hidden { display: none; }
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10%;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+}
+
+.hero button {
+  margin-top: 40px;
+  background: transparent;
+  border: 1px solid #ffb3c6;
+  color: #ffb3c6;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.story, .box, .letter {
+  padding: 10%;
+  animation: fadeIn 2s ease;
+}
+
+.glass {
+  margin-top: 40px;
+  width: 120px;
+  height: 160px;
+  border: 2px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

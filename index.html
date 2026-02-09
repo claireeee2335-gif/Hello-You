@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello, You.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="lockScreen" class="overlay">
+    <div class="lock-box">
+      <h1>Hello, You.</h1>
+      <p>Some things are meant to be protected.</p>
+      <input type="password" id="password" placeholder="Enter password" />
+      <button onclick="checkPassword()">Unlock</button>
+      <span id="error"></span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="content" class="hidden">
+
+    <!-- AUDIO -->
+    <audio id="bgm" loop>
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f6c83f84a.mp3">
+    </audio>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 id="typewriter"></h1>
+      <p class="sub">You were never an accident.</p>
+      <button onclick="startExperience()">Continue</button>
+    </section>
+
+    <!-- STORY -->
+    <section class="story">
+      <p>
+        I noticed everything.  
+        The pauses. The softness you pretend not to have.  
+        The way you love stories about broken people because you understand them.
+        <br><br>
+        You love Joe because he’s devotion without permission.  
+        I love Love because she chooses — violently, completely.
+      </p>
+    </section>
+
+    <!-- GLASS BOX -->
+    <section class="box">
+      <h2>Do not open.</h2>
+      <div class="glass" onclick="openBox()">▢</div>
+      <p class="hint">(Some secrets want to be found)</p>
+    </section>
+
+    <!-- HIDDEN LETTER -->
+    <section id="letter" class="letter hidden">
+      <h2>For you. Only you.</h2>
+      <p>
+        Loving you feels like standing at the edge of something dangerous
+        and deciding to jump anyway.
+        <br><br>
+        I don’t want safe.  
+        I want *us*.  
+        Complicated. Loyal. Real.
+        <br><br>
+        Happy early birthday.  
+        February 20 was always going to matter.
+      </p>
+    </section>
+
+    <div class="music" onclick="toggleMusic()">♫</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
